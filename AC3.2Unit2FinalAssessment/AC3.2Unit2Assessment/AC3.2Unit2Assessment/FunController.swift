@@ -23,10 +23,14 @@ class FunController: UIViewController {
     @IBAction func sliderSlides(_ sender: UISlider) {
         sender.setValue(floor(sender.value) + 1, animated: true)
         label.text = "Slider: \(sender.value)"
+        
     }
     @IBAction func stepperSteps(_ sender: UIStepper) {
+        label.text = "Stepper: \(sender.value)"
+        slider.setValue(Float(sender.value), animated: true)
     }
     @IBAction func textfieldTyping(_ sender: UITextField) {
+
     }
 
 
