@@ -21,6 +21,8 @@ class FunController: UIViewController {
     }
 
     @IBAction func sliderSlides(_ sender: UISlider) {
+        sender.setValue(floor(sender.value) + 1, animated: true)
+        label.text = "Slider: \(sender.value)"
     }
     @IBAction func stepperSteps(_ sender: UIStepper) {
     }
