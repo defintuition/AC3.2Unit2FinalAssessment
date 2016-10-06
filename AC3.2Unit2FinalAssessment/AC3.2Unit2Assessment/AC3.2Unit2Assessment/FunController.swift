@@ -42,22 +42,21 @@ class FunController: UIViewController, UITextFieldDelegate {
     
     // Textfield typing below
     
-    // These 3 are from http://stackoverflow.com/questions/24171857/implementing-uitextfielddelegate-with-swift
-    @nonobjc func textFieldDidBeginEditing(textField: UITextField!) {    //delegate method
-        print("TextField did begin editing method called")
-    }
-    @nonobjc func textFieldShouldEndEditing(textField: UITextField!) -> Bool {  //delegate method
-        print("TextField should end editing method called")
-        return false
-    }
-    @nonobjc func textFieldShouldReturn(textField: UITextField!) -> Bool {   //delegate method
-        textField.resignFirstResponder()
-        print("TextField should return editing method called")
-        return true
-    }
-    
     @IBAction func textfieldTyping(_ sender: UITextField) {
-        //oh frick we need a delegate...that's why it's not updating
+        // These 3 are from http://stackoverflow.com/questions/24171857/implementing-uitextfielddelegate-with-swift
+        func textFieldDidBeginEditing(textField: UITextField!) {    //delegate method
+            print("TextField did begin editing method called")
+        }
+        func textFieldShouldEndEditing(textField: UITextField!) -> Bool {  //delegate method
+            print("TextField should end editing method called")
+            return false
+        }
+        func textFieldShouldReturn(textField: UITextField!) -> Bool {   //delegate method
+            textField.resignFirstResponder()
+            print("TextField should return editing method called")
+            return true
+        }
+        
         var text:String? = textfield.text
         if let unwrapText = text {
             label.text = "User typed: \(unwrapText)"
