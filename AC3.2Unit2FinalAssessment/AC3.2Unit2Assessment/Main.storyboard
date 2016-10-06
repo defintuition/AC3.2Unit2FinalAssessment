@@ -39,7 +39,7 @@
                                 <color key="backgroundColor" red="0.87191647291183472" green="0.9288400411605835" blue="0.91838836669921875" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done"/>
                                 <connections>
                                     <action selector="textfieldTyping:" destination="8rJ-Kc-sve" eventType="editingDidEnd" id="32h-K4-EGg"/>
                                 </connections>

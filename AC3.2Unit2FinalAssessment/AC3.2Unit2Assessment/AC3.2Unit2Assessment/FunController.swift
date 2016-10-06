@@ -22,12 +22,13 @@ class FunController: UIViewController {
 
     @IBAction func sliderSlides(_ sender: UISlider) {
         sender.setValue(floor(sender.value) + 1, animated: true)
-        label.text = "Slider: \(sender.value)"
-        
+        label.text = "Slider: \(Int(sender.value))"
+        textfield.text = String(Int(sender.value))
     }
     @IBAction func stepperSteps(_ sender: UIStepper) {
         if sender.value < 20 {
-            label.text = "Stepper: \(sender.value)"
+            label.text = "Stepper: \(Int(sender.value))"
+            textfield.text = String(Int(sender.value))
         } else {
         label.text = "Stepper: 20"
     }
@@ -36,7 +37,7 @@ class FunController: UIViewController {
     }
     @IBAction func textfieldTyping(_ sender: UITextField) {
         //oh frick we need a delegate...that's why it's not updating
-        var text:String? = self.textfield.text
+        var text:String? = textfield.text
         if let unwrapText = text {
             label.text = "User typed: \(unwrapText)"
             let floatCast:Float? = Float(unwrapText)
