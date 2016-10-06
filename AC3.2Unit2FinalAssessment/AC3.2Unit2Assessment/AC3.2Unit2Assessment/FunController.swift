@@ -26,7 +26,12 @@ class FunController: UIViewController {
         
     }
     @IBAction func stepperSteps(_ sender: UIStepper) {
-        label.text = "Stepper: \(sender.value)"
+        if sender.value < 20 {
+            label.text = "Stepper: \(sender.value)"
+        } else {
+        label.text = "Stepper: 20"
+    }
+        
         slider.setValue(Float(sender.value), animated: true)
     }
     @IBAction func textfieldTyping(_ sender: UITextField) {
