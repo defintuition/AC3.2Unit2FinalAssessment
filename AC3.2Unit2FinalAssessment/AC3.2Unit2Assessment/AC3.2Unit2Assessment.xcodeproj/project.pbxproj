@@ -14,6 +14,7 @@
 		D3D7AD381DA6AD550042B79D /* FunController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D7AD351DA6AD550042B79D /* FunController.swift */; };
 		D3D7AD3B1DA6AD730042B79D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3D7AD391DA6AD730042B79D /* LaunchScreen.storyboard */; };
 		D3D7AD3C1DA6AD730042B79D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3D7AD3A1DA6AD730042B79D /* Main.storyboard */; };
+		D3D7AD3E1DA6ADF80042B79D /* CrayonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D7AD3D1DA6ADF80042B79D /* CrayonData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		D3D7AD351DA6AD550042B79D /* FunController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FunController.swift; sourceTree = "<group>"; };
 		D3D7AD391DA6AD730042B79D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ../LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3D7AD3A1DA6AD730042B79D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
+		D3D7AD3D1DA6ADF80042B79D /* CrayonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrayonData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		D3D7AD1E1DA6ACF60042B79D /* AC3.2Unit2Assessment */ = {
 			isa = PBXGroup;
 			children = (
+				D3D7AD3D1DA6ADF80042B79D /* CrayonData.swift */,
 				D3D7AD391DA6AD730042B79D /* LaunchScreen.storyboard */,
 				D3D7AD3A1DA6AD730042B79D /* Main.storyboard */,
 				D3D7AD1F1DA6ACF60042B79D /* AppDelegate.swift */,
@@ -145,6 +148,7 @@
 				D3D7AD381DA6AD550042B79D /* FunController.swift in Sources */,
 				D3D7AD201DA6ACF60042B79D /* AppDelegate.swift in Sources */,
 				D3D7AD371DA6AD550042B79D /* CrayonBoxController.swift in Sources */,
+				D3D7AD3E1DA6ADF80042B79D /* CrayonData.swift in Sources */,
 				D3D7AD361DA6AD550042B79D /* ColoringBookController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
