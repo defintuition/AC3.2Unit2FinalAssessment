@@ -10,6 +10,11 @@ import UIKit
 
 class FunController: UIViewController {
 
+    @IBOutlet weak var slider: UISlider!
+    @IBOutlet weak var stepper: UIStepper!
+    @IBOutlet weak var textfield: UITextField!
+    @IBOutlet weak var label: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

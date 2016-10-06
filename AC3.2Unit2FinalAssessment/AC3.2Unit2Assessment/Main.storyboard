@@ -10,7 +10,7 @@
         <!--Fun Controls -->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController title="Fun Controls " id="8rJ-Kc-sve" customClass="FunController" customModule="AC3_2Unit2FinalAssessment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Fun Controls " id="8rJ-Kc-sve" customClass="FunController" customModule="AC3_2Unit2Assessment" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -46,6 +46,12 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="label" destination="ZrA-K4-dU2" id="W95-7x-Qlu"/>
+                        <outlet property="slider" destination="OLE-7L-1E1" id="pSY-64-VbD"/>
+                        <outlet property="stepper" destination="TaA-Un-RSD" id="1Zu-Cu-wCR"/>
+                        <outlet property="textfield" destination="cAH-tv-WmM" id="v2B-K4-8Cw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -54,7 +60,7 @@
         <!--Crayon Box-->
         <scene sceneID="ZWK-dA-kI9">
             <objects>
-                <tableViewController title="Crayon Box" id="PpV-LM-N4t" customClass="CrayonBoxController" customModule="AC3_2Unit2FinalAssessment" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Crayon Box" id="PpV-LM-N4t" customClass="CrayonBoxController" customModule="AC3_2Unit2Assessment" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="FwB-Xt-06m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -102,7 +108,7 @@
         <!--Coloring Book-->
         <scene sceneID="lxo-RO-veo">
             <objects>
-                <viewController title="Coloring Book" id="9SP-WG-97F" customClass="ColoringBookController" customModule="AC3_2Unit2FinalAssessment" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Coloring Book" id="9SP-WG-97F" customClass="ColoringBookController" customModule="AC3_2Unit2Assessment" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wLG-JH-AuA"/>
                         <viewControllerLayoutGuide type="bottom" id="ux3-q7-l2j"/>
@@ -126,6 +132,9 @@
                             <constraint firstItem="ux3-q7-l2j" firstAttribute="top" secondItem="WDo-wY-7Og" secondAttribute="bottom" id="UHU-vD-Lg6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="colorName" destination="WDo-wY-7Og" id="YyI-5a-4b6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nbJ-TO-HQp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
