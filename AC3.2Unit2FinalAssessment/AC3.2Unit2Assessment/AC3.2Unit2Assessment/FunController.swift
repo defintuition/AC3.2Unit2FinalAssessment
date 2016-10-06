@@ -35,7 +35,13 @@ class FunController: UIViewController {
         slider.setValue(Float(sender.value), animated: true)
     }
     @IBAction func textfieldTyping(_ sender: UITextField) {
-
+        var text:String? = self.textfield.text
+        if let unwrapText = text {
+            label.text = unwrapText
+        } else {
+            label.text = ""
+        }
+        
     }
 
 
