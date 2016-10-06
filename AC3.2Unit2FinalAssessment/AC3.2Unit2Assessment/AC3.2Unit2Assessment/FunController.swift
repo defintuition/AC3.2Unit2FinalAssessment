@@ -35,15 +35,19 @@ class FunController: UIViewController {
         slider.setValue(Float(sender.value), animated: true)
     }
     @IBAction func textfieldTyping(_ sender: UITextField) {
+        //oh frick we need a delegate...that's why it's not updating
         var text:String? = self.textfield.text
         if let unwrapText = text {
-            label.text = unwrapText
-        } else {
-            label.text = ""
-        }
+            label.text = "User typed: \(unwrapText)"
+            let floatCast:Float? = Float(unwrapText)
+            if let unwrapFloat = floatCast {
+                if unwrapFloat < 20 {
+                    slider.setValue(unwrapFloat, animated: true)
+                }
+            } else {
+                label.text = "User typed nada"
+            }
         
+        }
     }
-
-
 }
-
