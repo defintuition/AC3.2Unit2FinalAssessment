@@ -31,6 +31,27 @@ class CrayonBoxController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 1
     }
+    
+    override func tableView(_ tableView: UITableView,
+                            cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(
+            withIdentifier: "Crayon", for: indexPath)
+        let label = cell.viewWithTag(16) as! UILabel
+        
+        if indexPath.row == 0 {
+            label.text = "Walk the dog"
+        } else if indexPath.row == 1 {
+            label.text = "Brush my teeth"
+        } else if indexPath.row == 2 {
+            label.text = "Learn iOS design"
+        } else if indexPath.row == 3 {
+            label.text = "Soccer practice"
+        } else if indexPath.row == 4 {
+            label.text = "Eat icecream"
+        }
+        return cell
+    }
+
 
     
     // crayolaColors is a global variable defined in CrayonData.swift
