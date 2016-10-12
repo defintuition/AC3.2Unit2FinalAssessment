@@ -85,7 +85,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Uy1-PZ-dmQ" kind="show" id="KZv-J1-WEM"/>
+                                    <segue destination="Uy1-PZ-dmQ" kind="show" identifier="colorNameIdentifier" id="KZv-J1-WEM"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -100,10 +100,10 @@
             </objects>
             <point key="canvasLocation" x="1654" y="184"/>
         </scene>
-        <!--View Controller-->
+        <!--Color Table View Controller-->
         <scene sceneID="rtN-Ue-9Yi">
             <objects>
-                <viewController id="Uy1-PZ-dmQ" sceneMemberID="viewController">
+                <viewController id="Uy1-PZ-dmQ" customClass="ColorTableViewController" customModule="AC3_2Unit2Assessment" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hAT-7K-Bew"/>
                         <viewControllerLayoutGuide type="bottom" id="SiD-dE-YSI"/>
@@ -112,20 +112,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIy-35-YOK">
-                                <frame key="frameInset" minX="166" minY="323" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Color" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KIy-35-YOK">
+                                <frame key="frameInset" minX="16" minY="304" width="343" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="colorName" destination="KIy-35-YOK" id="0uk-vm-8ZY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xgg-EO-Xo6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2471" y="184"/>
+            <point key="canvasLocation" x="2469.5999999999999" y="183.95802098950526"/>
         </scene>
         <!--Item-->
         <scene sceneID="Iwr-cj-9kj">

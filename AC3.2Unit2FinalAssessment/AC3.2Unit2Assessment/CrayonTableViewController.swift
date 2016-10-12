@@ -11,6 +11,8 @@ import UIKit
 class CrayonTableViewController: UITableViewController {
 
     var crayons = [Crayon]()
+    var selectedColor: Crayon?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +55,18 @@ class CrayonTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedColor = self.crayons[indexPath.row]
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "colorNameIdentifier" {
+            if let destination = segue.destination as? ColorTableViewController {
+                destination.detailCrayon = selectedColor
+            }
+            
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
