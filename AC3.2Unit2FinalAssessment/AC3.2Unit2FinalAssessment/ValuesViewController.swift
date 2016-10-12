@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ValuesViewController: UIViewController {
+class ValuesViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var sliderOutlet: UISlider!
     @IBOutlet weak var stepperOutlet: UIStepper!
     @IBOutlet weak var labelOutlet: UILabel!
@@ -16,20 +16,11 @@ class ValuesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        textfieldOutlet.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    //Code I found that's supposed to only allow Int input in a textfield
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool
-        
-    {
-        let numberOnly = NSCharacterSet.init(charactersIn: "0123456789")
-        let stringFromTextField = NSCharacterSet.init(charactersIn: string)
-        let strValid = numberOnly.isSuperset(of: stringFromTextField as CharacterSet)
-        
-        return strValid
-    }
-    @IBAction func sliderAction(_ sender: UISlider) {
+        @IBAction func sliderAction(_ sender: UISlider) {
        stepperOutlet.value = Double(sender.value)
         labelOutlet.text = String(Int(sender.value))
         textfieldOutlet.text = String(Int(sender.value))
@@ -41,10 +32,14 @@ class ValuesViewController: UIViewController {
     }
     
     //Could not figure out how to get textfield input to interact with Slider and Stepper
-    @IBAction func textFieldAction(_ sender: UITextField) {
-        labelOutlet.text = sender.text
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let textFieldText = textField.text, let doubleText = Double(textFieldText), let floatText = Float(textFieldText) {
+            sliderOutlet.value = floatText
+            stepperOutlet.value = doubleText
+            labelOutlet.text = textFieldText
+        }
+        return true
     }
-    
     
     
 }

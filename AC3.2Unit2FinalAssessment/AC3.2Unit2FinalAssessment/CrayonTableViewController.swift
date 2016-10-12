@@ -10,33 +10,40 @@ import UIKit
 
 class CrayonTableViewController: UITableViewController {
 var crayons = [Crayon]()
-    
+//var selectedColor: Crayon?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-    }
-
-
-    // MARK: - Table view data source
-
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 20
-    }
-
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Colors", for: indexPath)
-        let label = cell.viewWithTag(1)
-        
         for c in crayolaColors {
             if let crayon = Crayon(fromDict: c) {
                 crayons.append(crayon)
             }
             
         }
+    }
+
+
+    // MARK: - Table view data source
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return crayons.count
+    }
+
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Colors", for: indexPath)
+        
+        let crayonCell = crayons[indexPath.row]
+        cell.textLabel?.text = crayonCell.name
+        cell.backgroundColor = UIColor(colorLiteralRed: Float(crayonCell.red), green: Float(crayonCell.green), blue: Float(crayonCell.blue), alpha: 1.0)
+        if cell.textLabel?.text == "Black" {
+            cell.textLabel?.textColor = UIColor.white
+        }
+
         return cell
     }
     
@@ -48,12 +55,23 @@ var crayons = [Crayon]()
         return true
     }
     */
-
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedColor = self.crayons[indexPath.row]
+        performSegue(withIdentifier: "showColor", sender: selectedColor)
+    }
+    
+        
+    
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "showColor" {
+            if let destination = segue.destination as? CrayonViewController {
+                destination.detailCrayon =  sender as? Crayon
+            }
+        }
     }
-
 }
+
+
 
