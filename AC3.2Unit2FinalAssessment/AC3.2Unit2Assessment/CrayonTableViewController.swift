@@ -28,11 +28,6 @@ class CrayonTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -51,9 +46,9 @@ class CrayonTableViewController: UITableViewController {
 
         // Configure the cell...
         
-        for crayon in crayons {
-            
-        }
+        let crayonsAtIndexPath = self.crayons[indexPath.row]
+            cell.textLabel?.text = crayonsAtIndexPath.name
+            cell.backgroundColor = UIColor(red: (self.red), green: (self.green), blue: (self.blue), alpha: (1.0))
         
         return cell
     }
