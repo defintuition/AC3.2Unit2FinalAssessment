@@ -12,6 +12,12 @@
 		2D18840E1DA69DB2009E5F63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D18840C1DA69DB2009E5F63 /* Main.storyboard */; };
 		2D1884101DA69DB2009E5F63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D18840F1DA69DB2009E5F63 /* Assets.xcassets */; };
 		2D1884131DA69DB2009E5F63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D1884111DA69DB2009E5F63 /* LaunchScreen.storyboard */; };
+		2D18841B1DA6A037009E5F63 /* ColorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D18841A1DA6A037009E5F63 /* ColorTableViewController.swift */; };
+		2D18841D1DA6A088009E5F63 /* CrayonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D18841C1DA6A088009E5F63 /* CrayonViewController.swift */; };
+		2D18841F1DA6A0E9009E5F63 /* CrayonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D18841E1DA6A0E9009E5F63 /* CrayonData.swift */; };
+		2D1884221DA6A128009E5F63 /* Crayon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1884211DA6A128009E5F63 /* Crayon.swift */; };
+		2D1884251DA6A669009E5F63 /* CrayonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1884241DA6A669009E5F63 /* CrayonTableViewCell.swift */; };
+		2D1884291DA6BE28009E5F63 /* SliderStepperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1884281DA6BE28009E5F63 /* SliderStepperViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		2D18840F1DA69DB2009E5F63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D1884121DA69DB2009E5F63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D1884141DA69DB2009E5F63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D18841A1DA6A037009E5F63 /* ColorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTableViewController.swift; sourceTree = "<group>"; };
+		2D18841C1DA6A088009E5F63 /* CrayonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrayonViewController.swift; sourceTree = "<group>"; };
+		2D18841E1DA6A0E9009E5F63 /* CrayonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrayonData.swift; sourceTree = "<group>"; };
+		2D1884211DA6A128009E5F63 /* Crayon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Crayon.swift; sourceTree = "<group>"; };
+		2D1884241DA6A669009E5F63 /* CrayonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrayonTableViewCell.swift; sourceTree = "<group>"; };
+		2D1884281DA6BE28009E5F63 /* SliderStepperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderStepperViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +69,33 @@
 				2D1884081DA69DB2009E5F63 /* AppDelegate.swift */,
 				2D18840A1DA69DB2009E5F63 /* ViewController.swift */,
 				2D18840C1DA69DB2009E5F63 /* Main.storyboard */,
+				2D1884201DA6A0FC009E5F63 /* Supporting Files */,
+				2D18841A1DA6A037009E5F63 /* ColorTableViewController.swift */,
+				2D18841C1DA6A088009E5F63 /* CrayonViewController.swift */,
+				2D1884231DA6A622009E5F63 /* Model */,
+				2D1884241DA6A669009E5F63 /* CrayonTableViewCell.swift */,
+				2D1884281DA6BE28009E5F63 /* SliderStepperViewController.swift */,
+			);
+			path = AC3.2Unit2FinalAssessment;
+			sourceTree = "<group>";
+		};
+		2D1884201DA6A0FC009E5F63 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				2D18840F1DA69DB2009E5F63 /* Assets.xcassets */,
 				2D1884111DA69DB2009E5F63 /* LaunchScreen.storyboard */,
 				2D1884141DA69DB2009E5F63 /* Info.plist */,
 			);
-			path = AC3.2Unit2FinalAssessment;
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2D1884231DA6A622009E5F63 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2D18841E1DA6A0E9009E5F63 /* CrayonData.swift */,
+				2D1884211DA6A128009E5F63 /* Crayon.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +171,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D18841D1DA6A088009E5F63 /* CrayonViewController.swift in Sources */,
 				2D18840B1DA69DB2009E5F63 /* ViewController.swift in Sources */,
+				2D18841B1DA6A037009E5F63 /* ColorTableViewController.swift in Sources */,
+				2D1884291DA6BE28009E5F63 /* SliderStepperViewController.swift in Sources */,
+				2D1884221DA6A128009E5F63 /* Crayon.swift in Sources */,
+				2D1884251DA6A669009E5F63 /* CrayonTableViewCell.swift in Sources */,
+				2D18841F1DA6A0E9009E5F63 /* CrayonData.swift in Sources */,
 				2D1884091DA69DB2009E5F63 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

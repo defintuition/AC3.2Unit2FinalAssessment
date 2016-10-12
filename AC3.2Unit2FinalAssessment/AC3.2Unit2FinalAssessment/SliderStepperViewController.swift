@@ -8,28 +8,46 @@
 
 import UIKit
 
-class SliderStepperViewController: UIViewController {
-
+class SliderStepperViewController: UIViewController, UITextFieldDelegate {
+    
+    var value = 0
+    
+    @IBOutlet weak var label: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        textField.delegate = self
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    let step: Float = 10
+    @IBAction func slidder(_ sender: UISlider) {
+        let roundedValue = round(sender.value / step) * step
+        sender.value = roundedValue
+        value = Int(sender.value)
+        label.text = String(value)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func stepper(_ sender: UIStepper) {
+        value = Int(sender.value)
+        label.text = String(value)
+        
     }
-    */
-
+    
+    @IBOutlet weak var textField: UITextField!
+    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder() //Hide Keyboard
+        return true
+    }
+    
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if let text = textField.text {
+            value = Int(text)!
+            label.text = String(value)
+        }
+    }
+    
+    
 }

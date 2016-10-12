@@ -9,16 +9,29 @@
 import UIKit
 
 class CrayonTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var colorLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        //        backgroundColor = .red
         // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func setData(color: Crayon) {
+        let name = color.name
+        let red = color.red
+        let green = color.green
+        let blue = color.blue
+        
+        self.colorLabel.text = name
+        self.backgroundColor = UIColor(red: CGFloat(red), green: CGFloat(green), blue: CGFloat(blue), alpha: 1.0)
+        
+        if self.backgroundColor == UIColor(red: CGFloat(0), green: CGFloat(0), blue: CGFloat(0), alpha: 1.0) {
+            colorLabel.textColor = .white
+        }
+        
     }
-
+    
+    
 }
