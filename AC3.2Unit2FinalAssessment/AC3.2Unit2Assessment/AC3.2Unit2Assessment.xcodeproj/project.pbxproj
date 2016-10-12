@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D31E3B331DAEA4DE00F44D4B /* CrayonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31E3B321DAEA4DE00F44D4B /* CrayonTableViewController.swift */; };
+		D31E3B351DAEA51500F44D4B /* ColorTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31E3B341DAEA51500F44D4B /* ColorTableViewController.swift */; };
 		D3D7AD201DA6ACF60042B79D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D7AD1F1DA6ACF60042B79D /* AppDelegate.swift */; };
 		D3D7AD291DA6ACF60042B79D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3D7AD281DA6ACF60042B79D /* Assets.xcassets */; };
 		D3D7AD3B1DA6AD730042B79D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3D7AD391DA6AD730042B79D /* LaunchScreen.storyboard */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D31E3B321DAEA4DE00F44D4B /* CrayonTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CrayonTableViewController.swift; path = ../CrayonTableViewController.swift; sourceTree = "<group>"; };
+		D31E3B341DAEA51500F44D4B /* ColorTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorTableViewController.swift; sourceTree = "<group>"; };
 		D3D7AD1C1DA6ACF60042B79D /* AC3.2Unit2Assessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AC3.2Unit2Assessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3D7AD1F1DA6ACF60042B79D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3D7AD281DA6ACF60042B79D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,6 +60,8 @@
 		D3D7AD1E1DA6ACF60042B79D /* AC3.2Unit2Assessment */ = {
 			isa = PBXGroup;
 			children = (
+				D31E3B341DAEA51500F44D4B /* ColorTableViewController.swift */,
+				D31E3B321DAEA4DE00F44D4B /* CrayonTableViewController.swift */,
 				D3D7AD3D1DA6ADF80042B79D /* CrayonData.swift */,
 				D3D7AD3F1DA6AE480042B79D /* Crayon.swift */,
 				D3D7AD391DA6AD730042B79D /* LaunchScreen.storyboard */,
@@ -140,7 +146,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3D7AD201DA6ACF60042B79D /* AppDelegate.swift in Sources */,
+				D31E3B331DAEA4DE00F44D4B /* CrayonTableViewController.swift in Sources */,
 				D3D7AD401DA6AE480042B79D /* Crayon.swift in Sources */,
+				D31E3B351DAEA51500F44D4B /* ColorTableViewController.swift in Sources */,
 				D3D7AD3E1DA6ADF80042B79D /* CrayonData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

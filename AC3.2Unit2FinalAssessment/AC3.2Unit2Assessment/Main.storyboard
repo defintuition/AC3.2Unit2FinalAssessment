@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Tab Bar Controller-->
+        <!--Color Table View Controller-->
         <scene sceneID="P9u-iV-5wc">
             <objects>
-                <tabBarController id="EgS-ho-SKx" sceneMemberID="viewController">
+                <tabBarController id="EgS-ho-SKx" customClass="ColorTableViewController" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="SoA-S1-cva">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -71,7 +71,7 @@
         <!--Root View Controller-->
         <scene sceneID="bOA-mb-drc">
             <objects>
-                <tableViewController id="zNs-fa-sJF" sceneMemberID="viewController">
+                <tableViewController id="zNs-fa-sJF" customClass="CrayonViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="UBY-pB-eXH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
