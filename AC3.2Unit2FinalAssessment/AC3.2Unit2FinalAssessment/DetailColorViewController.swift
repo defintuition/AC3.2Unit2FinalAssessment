@@ -21,6 +21,7 @@ class DetailColorViewController: UIViewController {
         super.viewDidLoad()
         colorName.text = selectedColor!.name
         view.backgroundColor = UIColor(red: CGFloat(selectedColor!.red), green: CGFloat(selectedColor!.green), blue: CGFloat(selectedColor!.blue), alpha: 1.0)
+        
         //colorName.text = "Some Color"
         
         //self.colorName.text = crayonColor!.name
@@ -36,7 +37,7 @@ class DetailColorViewController: UIViewController {
         self.colorName.text = crayon.name
         //return UIColor(red: CGFloat(crayon.red), green: CGFloat(crayon.green), blue: CGFloat(crayon.blue), alpha: 1.0)
     }
- */
+    */
     
 //    func setupData () {
 //        guard let cc = crayonColor else {return}

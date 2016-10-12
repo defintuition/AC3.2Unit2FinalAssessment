@@ -93,6 +93,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="OTo-WT-dCu" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="z5y-yt-aJ0">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
@@ -155,6 +156,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="2wF-ag-SM9"/>
                     <connections>
                         <outlet property="valueDisplayLabel" destination="tNk-lw-AY8" id="pyz-6a-Qkf"/>
+                        <outlet property="valueInputTextField" destination="znT-DL-bFL" id="kRp-z1-Npx"/>
                         <outlet property="valueUpdateSlider" destination="oeC-2B-pAN" id="nzK-wO-zjo"/>
                         <outlet property="valueUpdateStepper" destination="Xqn-WC-hC7" id="ydX-gY-Yha"/>
                     </connections>

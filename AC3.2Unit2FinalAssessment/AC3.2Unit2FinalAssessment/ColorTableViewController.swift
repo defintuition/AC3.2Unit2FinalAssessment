@@ -11,14 +11,10 @@ import UIKit
 class ColorTableViewController: UITableViewController {
     var crayonObjects = [Crayon?]()
     let cellIdentifier: String = "crayonColorCell"
-    
-    //let rawCrayonData: [[String : Any]] = crayonColors
-    //var crayonData: [Crayon]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Crayon Colors"
-                //var crayonContainer: [Crayon] = []
         
         for rawCrayon in crayolaColors {
             let crayon = Crayon(fromDict: rawCrayon)
@@ -26,20 +22,10 @@ class ColorTableViewController: UITableViewController {
             print("\n\n\n\n\n\n\n\n\n\n\n\n\n \( crayonObjects.count)")
         }
         
-        //        for studentDict in ac32_students{
-        //            let student = Student(studentDict: studentDict)
-        //            studentObjects.append(student)
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
@@ -63,8 +49,6 @@ class ColorTableViewController: UITableViewController {
         cell.textLabel?.text = crayon?.name
         cell.backgroundColor = UIColor(red: CGFloat(crayon!.red), green: CGFloat(crayon!.green), blue: CGFloat(crayon!.blue), alpha: 1.0)
 
-        // Configure the cell...
-
         return cell
     }
     
@@ -84,12 +68,8 @@ class ColorTableViewController: UITableViewController {
                 //4. get our cell's indexPath
                 let cellIndexPath = self.tableView.indexPath(for: tappedColorCell)!
                 
-                //5. get our cell's move
-//                guard let genre = Genre(rawValue: cellIndexPath.section),
-//                    let data = byGenre(genre) else {
-//                        return
-//                }
-                //6. set the destination's selectedMovie property
+                //5. set the destination's selectedMovie property
+                
                 let selectedColor: Crayon! = crayonObjects[cellIndexPath.row]
                 DetailColorViewController.selectedColor = selectedColor
             }
