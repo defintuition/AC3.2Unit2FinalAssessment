@@ -10,8 +10,16 @@ import UIKit
 
 class CrayonTableViewController: UITableViewController {
 
+    var crayons = [Crayon]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for c in crayolaColors {
+            if let crayon = Crayon(fromDict: c) {
+                crayons.append(crayon)
+            }
+        }
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -29,23 +37,27 @@ class CrayonTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return crayons.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
-
+        
+        for crayon in crayons {
+            
+        }
+        
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
