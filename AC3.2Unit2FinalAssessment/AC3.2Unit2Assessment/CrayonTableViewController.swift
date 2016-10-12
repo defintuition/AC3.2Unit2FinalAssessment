@@ -48,7 +48,7 @@ class CrayonTableViewController: UITableViewController {
         
         let crayonsAtIndexPath = self.crayons[indexPath.row]
             cell.textLabel?.text = crayonsAtIndexPath.name
-            cell.backgroundColor = UIColor(red: (self.red), green: (self.green), blue: (self.blue), alpha: (1.0))
+            cell.backgroundColor = UIColor(red: CGFloat(crayonsAtIndexPath.red), green: CGFloat(crayonsAtIndexPath.green), blue: CGFloat(crayonsAtIndexPath.blue), alpha: CGFloat(1.0))
         
         return cell
     }
