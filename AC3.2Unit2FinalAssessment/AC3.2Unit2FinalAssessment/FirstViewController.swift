@@ -9,18 +9,21 @@
 import UIKit
 
 class FirstViewController: UIViewController {
-
+  
   @IBOutlet weak var colorTitle: UILabel!
-  var thisColorTitle = " "
+  var crayon: Crayon?
   
   override func viewDidLoad() {
     super.viewDidLoad()
     
-   colorTitle.text = thisColorTitle
+    loadData()
     
   }
-
-
-
+  func loadData() {
+    colorTitle.text = crayon?.name
+    self.view.backgroundColor = UIColor(red: CGFloat((crayon?.red)!), green: CGFloat((crayon?.green)!), blue: CGFloat((crayon?.blue)!), alpha: 1.0)
+  }
+  
+  
 }
 

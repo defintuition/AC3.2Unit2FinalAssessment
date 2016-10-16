@@ -27,12 +27,10 @@ class TableViewController: UITableViewController {
   // MARK: - Table view data source
   
   override func numberOfSections(in tableView: UITableView) -> Int {
-    // #warning Incomplete implementation, return the number of sections
     return 1
   }
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    // #warning Incomplete implementation, return the number of rows
     return crayons.count
   }
   
@@ -40,26 +38,17 @@ class TableViewController: UITableViewController {
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "colorCell", for: indexPath)
     
-    // Configure the cell...
-    
-    
     if let colorCell: TableViewCell = cell as? TableViewCell {
       let myCray = crayons[indexPath.row]
       cell.backgroundColor = UIColor(red: CGFloat(myCray.red), green: CGFloat(myCray.green), blue: CGFloat(myCray.blue), alpha: 1.0)
       
-      colorCell.colorLabel.text = crayons[indexPath.row].name
+      colorCell.colorLabel.text = myCray.name
     }
     
     return cell
   }
   
-  /*
-   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-   let  thisColor = self.crayons[indexPath.row]
-   performSegue(withIdentifier: "colorPickerSegue", sender: thisColor)
-   
-   }
-   */
+
   // MARK: - Navigation
   
   // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -71,8 +60,7 @@ class TableViewController: UITableViewController {
         let cellIndexPath: IndexPath = self.tableView.indexPath(for: tappedColorCell)!
         let myCray = crayons[cellIndexPath.row]
         
-        colorView.thisColorTitle = myCray.name
-        colorView.view.backgroundColor = UIColor(red: CGFloat(myCray.red), green: CGFloat(myCray.green), blue: CGFloat(myCray.blue), alpha: 1.0)
+        colorView.crayon = myCray
       }
     }
     
