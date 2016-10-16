@@ -8,13 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		284B38241DA69D7500756375 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284B38231DA69D7500756375 /* AppDelegate.swift */; };
-		284B38261DA69D7500756375 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284B38251DA69D7500756375 /* ViewController.swift */; };
 		284B38291DA69D7500756375 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284B38271DA69D7500756375 /* Main.storyboard */; };
 		284B382B1DA69D7500756375 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 284B382A1DA69D7500756375 /* Assets.xcassets */; };
 		284B382E1DA69D7500756375 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 284B382C1DA69D7500756375 /* LaunchScreen.storyboard */; };
 		284B38361DA6A4B200756375 /* CrayonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284B38351DA6A4B200756375 /* CrayonData.swift */; };
 		284B38381DA6A4D700756375 /* Crayon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284B38371DA6A4D700756375 /* Crayon.swift */; };
-		284B383A1DA6A56600756375 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284B38391DA6A56600756375 /* TableViewController.swift */; };
 		284B383C1DA6A5F500756375 /* SliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284B383B1DA6A5F500756375 /* SliderViewController.swift */; };
 		284B383E1DA6A63700756375 /* CrayonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284B383D1DA6A63700756375 /* CrayonTableViewController.swift */; };
 		284B38401DA6A67A00756375 /* CrayonColorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284B383F1DA6A67A00756375 /* CrayonColorViewController.swift */; };
@@ -23,14 +21,12 @@
 /* Begin PBXFileReference section */
 		284B38201DA69D7500756375 /* AC3.2Unit2FinalAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AC3.2Unit2FinalAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		284B38231DA69D7500756375 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		284B38251DA69D7500756375 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		284B38281DA69D7500756375 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		284B382A1DA69D7500756375 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		284B382D1DA69D7500756375 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		284B382F1DA69D7500756375 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		284B38351DA6A4B200756375 /* CrayonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrayonData.swift; sourceTree = "<group>"; };
 		284B38371DA6A4D700756375 /* Crayon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Crayon.swift; sourceTree = "<group>"; };
-		284B38391DA6A56600756375 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		284B383B1DA6A5F500756375 /* SliderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderViewController.swift; sourceTree = "<group>"; };
 		284B383D1DA6A63700756375 /* CrayonTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrayonTableViewController.swift; sourceTree = "<group>"; };
 		284B383F1DA6A67A00756375 /* CrayonColorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrayonColorViewController.swift; sourceTree = "<group>"; };
@@ -67,14 +63,12 @@
 			isa = PBXGroup;
 			children = (
 				284B38231DA69D7500756375 /* AppDelegate.swift */,
-				284B38251DA69D7500756375 /* ViewController.swift */,
 				284B38351DA6A4B200756375 /* CrayonData.swift */,
 				284B38371DA6A4D700756375 /* Crayon.swift */,
 				284B38271DA69D7500756375 /* Main.storyboard */,
 				284B383F1DA6A67A00756375 /* CrayonColorViewController.swift */,
 				284B383D1DA6A63700756375 /* CrayonTableViewController.swift */,
 				284B383B1DA6A5F500756375 /* SliderViewController.swift */,
-				284B38391DA6A56600756375 /* TableViewController.swift */,
 				284B382A1DA69D7500756375 /* Assets.xcassets */,
 				284B382C1DA69D7500756375 /* LaunchScreen.storyboard */,
 				284B382F1DA69D7500756375 /* Info.plist */,
@@ -154,13 +148,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				284B38261DA69D7500756375 /* ViewController.swift in Sources */,
 				284B38241DA69D7500756375 /* AppDelegate.swift in Sources */,
 				284B38361DA6A4B200756375 /* CrayonData.swift in Sources */,
 				284B383C1DA6A5F500756375 /* SliderViewController.swift in Sources */,
 				284B38401DA6A67A00756375 /* CrayonColorViewController.swift in Sources */,
 				284B383E1DA6A63700756375 /* CrayonTableViewController.swift in Sources */,
-				284B383A1DA6A56600756375 /* TableViewController.swift in Sources */,
 				284B38381DA6A4D700756375 /* Crayon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -323,6 +315,7 @@
 				284B38341DA69D7500756375 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

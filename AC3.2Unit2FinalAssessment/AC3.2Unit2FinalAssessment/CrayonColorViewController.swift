@@ -1,8 +1,8 @@
 //
-//  CrayonColorViewController.swift
-//  AC3.2Unit2FinalAssessment
+//  CrayonViewController.swift
+//  AssessmentReviewiWithJovanny
 //
-//  Created by Margaret Ikeda on 10/6/16.
+//  Created by Margaret Ikeda on 10/12/16.
 //  Copyright © 2016 Margaret Ikeda. All rights reserved.
 //
 
@@ -10,26 +10,28 @@ import UIKit
 
 class CrayonColorViewController: UIViewController {
 
+    @IBOutlet weak var colorLabel: UILabel!
+
+    var detailCrayon: Crayon? {
+        didSet {
+            guard let detailCrayon = detailCrayon else { return }
+            self.navigationItem.title = detailCrayon.name
+            view.backgroundColor = UIColor(displayP3Red: CGFloat(detailCrayon.red),
+                                           green: CGFloat(detailCrayon.green),
+                                           blue: CGFloat(detailCrayon.blue),
+                                           alpha: 1)
+        }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let color = detailCrayon {
+            colorLabel.text = "Red: \(color.red) \nGreen: \(color.green) \nBlue: \(color.blue)"
+
+            //            if detailCrayon.name = "Black" {
+            //                let cell.textLabel.textColor = UIColor.white {
+
+        }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

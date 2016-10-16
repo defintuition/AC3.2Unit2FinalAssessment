@@ -8,32 +8,39 @@
 
 import UIKit
 
-class SliderViewController: UIViewController {
+class SliderViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var stepper: UIStepper!
     @IBOutlet weak var sliderLabel: UILabel!
-    @IBOutlet weak var stepperLabel: UILabel!
+    @IBOutlet weak var textField: UITextField!
+
+
+    @IBAction func slideDidChange(_ sender: UISlider) {
+        update(withValue: sender.value)
+    }
+
+    @IBAction func stepperDidChange(_ sender: UIStepper) {
+        update(withValue: Float(sender.value))
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        textField.delegate = self
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        if let text = textField.text,
+            let value = Float(text), 0...100 ~= value {
+            update(withValue: value)
+        }
+        return true
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func update(withValue value: Float) {
+        slider.setValue(value, animated: true)
+        sliderLabel.text = String(value)
+        stepper.value = Double(value)
     }
-    */
-
 }
