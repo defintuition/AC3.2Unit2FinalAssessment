@@ -13,7 +13,6 @@ class CrayonTableViewController: UITableViewController {
     var crayons = [Crayon]()
     var selectedColor: Crayon?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,12 +21,6 @@ class CrayonTableViewController: UITableViewController {
                 crayons.append(crayon)
             }
         }
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     // MARK: - Table view data source
@@ -57,10 +50,11 @@ class CrayonTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedColor = self.crayons[indexPath.row]
+        performSegue(withIdentifier: "showColor", sender: selectedColor)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "colorNameIdentifier" {
+        if segue.identifier == "showColor" {
             if let destination = segue.destination as? ColorTableViewController {
                 destination.detailCrayon = selectedColor
             }
